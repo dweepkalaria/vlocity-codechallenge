@@ -1,0 +1,15 @@
+<div class="col-sm-3">
+	<div class="user-list-cell" ng-class="{active: user.name === selectedUser.name}" ng-repeat="user in users | filter:searchString"
+		ui-sref="users.detail({ userName: user.name })" ng-click="userSelected(user)">
+		<span>{{user.name}}</span>
+		<div class="float-right">
+			<i class="fa fa-play"></i>
+		</div>
+	</div>
+</div>
+<div class="col-sm-9">
+	<!--<div ng-if="!selectedUser" class="no-user-msg">Select user to view details</div>
+	<div ng-if="selectedUser">-->
+		<div ui-view></div>
+	<!--</div>-->
+</div>

@@ -1,0 +1,78 @@
+.margin-top-auto{
+    margin-top: 15px;
+}
+.list-detail-pane{
+    margin-top: 15px;
+    padding-top: 15px;
+    border: 1px solid #dfd7ca;
+}
+
+.search-div{
+    margin-left: 15px;
+}
+.search-left-btn{
+    height: 20px;
+    background: transparent;
+    border-right: 0px;
+    border-radius: 25px;
+}
+.search-right-btn{
+    height: 20px;
+    background: transparent;
+    border-left: 0px;
+    border-radius: 25px;
+}
+.search-box{
+    border-left: 0px;
+    border-right: 0px;
+}
+.search-user-name{
+    vertical-align: middle;
+}
+
+.user-list-cell{
+    border-width: 1px 2px 1px 2px;
+    border-color: #dfd7ca;
+    border-style: solid;
+    line-height: 90px;
+    padding: 5px;
+    font-size: 20px;
+}
+.user-list-cell:hover{
+    background: #f9f7f9;
+}
+.user-list-cell.active{
+    background: #f8f5f0;
+}
+.float-right{
+    float: right;
+}
+
+.no-user-msg{
+    color: #dfd7ca;
+    font-size: 50px;
+    line-height: 90px;
+    margin-top: 25%;
+    margin-left: 10%;
+}
+.user-image{
+    height: 100px;
+    width: 100px
+}
+.msg-btn{
+    width: 155px;
+}
+.rating{
+    margin: 2px;
+}
+.rating-group{
+    margin-top: 15px;
+}
+.n-rating-group{
+    margin-left: -3px;
+}
+
+.description{
+    margin: 15px;
+    min-height: 150px;
+}

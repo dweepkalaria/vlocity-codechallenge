@@ -1,0 +1,39 @@
+<!--<h3>{{user.name}}</h3>-->
+
+<div class="clearfix">
+	<div class="col-sm-3">
+		<img ng-src="{{user.img}}" class="img-rounded user-image" />
+	</div>
+	<div class="col-sm-9">
+		<button class="btn btn-default text-uppercase msg-btn"> Send Message!</button>
+		<div class="rating-group">
+			<i class="fa fa-heart fa-2x rating" aria-hidden="true" ng-repeat="rate in getRating(user.rating) track by $index"></i>
+			<span class="n-rating-group">
+			    <i class="fa fa-heart-o fa-2x rating" aria-hidden="true" ng-repeat="rate in getRating(5 - user.rating) track by $index"></i>
+            </span>
+		</div>
+	</div>
+</div>
+<div class="description clearfix">
+	<blockquote>
+		<p>{{user.Description}}</p>
+	</blockquote>
+</div>
+<div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <th>
+                Likes
+            </th>
+            <th>
+                Dislikes
+            </th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="foo in getLikeArray(user.Likes, user.Dislikes) track by $index">
+                <td>{{user.Likes[$index]}}</td>
+                <td>{{user.Dislikes[$index]}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
