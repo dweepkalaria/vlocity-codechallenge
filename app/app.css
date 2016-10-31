@@ -26,8 +26,19 @@
     border-left: 0px;
     border-right: 0px;
 }
-.search-user-name{
+.user-profile{
+    margin-left: 55%;
+}
+.user-profile-name{
     vertical-align: middle;
+    padding-bottom: 20px;
+    margin-right: 20px;
+}
+.user-profile-button{
+    align-self: stretch;
+    width: 25px;
+    background: transparent;
+    border: none;
 }
 
 .user-list-cell{

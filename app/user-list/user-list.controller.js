@@ -12,6 +12,7 @@
             console.log(reason);
         });
 
+        // Get search string from search module.
         $scope.$on("searchStringChanged", function (event, searchString) {
             $scope.searchString = searchString;
         })
