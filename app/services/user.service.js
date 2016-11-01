@@ -41,18 +41,20 @@
             };
 
             function readTextFile(file, callback, error) {
-                var rawFile = new XMLHttpRequest();
-                rawFile.overrideMimeType("application/json");
-                rawFile.open("GET", file, true);
-                rawFile.onreadystatechange = function () {
-                    if (rawFile.readyState === 4 && rawFile.status == "200") {
-                        callback(rawFile.responseText);
+                try {
+                    var rawFile = new XMLHttpRequest();
+                    rawFile.overrideMimeType("application/json");
+                    rawFile.open("GET", file, true);
+                    rawFile.onreadystatechange = function () {
+                        if (rawFile.readyState === 4 && rawFile.status == "200") {
+                            callback(rawFile.responseText.toString());
+                        }
                     }
-                    // else if (rawFile.status != "200") {
-                    //     error("Failed to get data");
-                    // }
+                    rawFile.send(null);
                 }
-                rawFile.send(null);
+                catch (err) {
+                    error(err);
+                }
             }
 
         });

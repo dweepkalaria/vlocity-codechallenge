@@ -1,6 +1,9 @@
 <div class="col-sm-3">
-	<div class="user-list-cell" ng-class="{active: isSelectedUser(user)}" ng-repeat="user in users | filter:searchString"
-		ui-sref="users.detail({ userName: user.name })" ng-click="userSelected(user)">
+	<div class="user-list-cell" 
+		ng-class="{active: isSelectedUser(user)}" 
+		ng-repeat="user in users | filter:searchString" 
+		ui-sref="users.detail({ userName: user.name })"
+		ng-click="userSelected(user)">
 		<span>{{user.name}}</span>
 		<div class="float-right" ng-if="isSelectedUser(user)">
 			<i class="fa fa-play"></i>
@@ -8,8 +11,8 @@
 	</div>
 </div>
 <div class="col-sm-9">
-	<!--<div ng-if="!selectedUser" class="no-user-msg">Select user to view details</div>
-	<div ng-if="selectedUser">-->
+	<div ng-if="!selectedUser" class="no-user-msg">Select user to view details</div>
+	<div ng-if="selectedUser">
 		<div ui-view></div>
-	<!--</div>-->
+	</div>
 </div>

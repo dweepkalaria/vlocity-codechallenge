@@ -5,7 +5,13 @@
 		<img ng-src="{{user.img}}" class="img-rounded user-image" />
 	</div>
 	<div class="col-sm-9">
-		<button class="btn btn-default text-uppercase msg-btn"> Send Message!</button>
+		<button ng-if="!showMessageBox" class="btn btn-default text-uppercase msg-btn" ng-click="sendMessage()"> Send Message!</button>
+		<div class="form-group" ng-if="showMessageBox">
+			<div class="input-group">
+				<input type="text" class="form-control" ng-model="message" placeholder="Message">
+				<div class="input-group-addon" title="Send Message" ng-click="sendMessage()"><i class="fa fa-paper-plane" aria-hidden="true"></i></div>
+			</div>
+		</div>
 		<div class="rating-group">
 			<i class="fa fa-heart fa-2x rating" aria-hidden="true" ng-repeat="rate in getRating(user.rating) track by $index"></i>
 			<span class="n-rating-group">
@@ -20,20 +26,16 @@
 	</blockquote>
 </div>
 <div>
-    <table class="table table-bordered table-striped">
-        <thead>
-            <th>
-                Likes
-            </th>
-            <th>
-                Dislikes
-            </th>
-        </thead>
-        <tbody>
-            <tr ng-repeat="foo in getLikeArray(user.Likes, user.Dislikes) track by $index">
-                <td>{{user.Likes[$index]}}</td>
-                <td>{{user.Dislikes[$index]}}</td>
-            </tr>
-        </tbody>
-    </table>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<th>Likes</th>
+			<th>Dislikes</th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="foo in getLikeArray(user.Likes, user.Dislikes) track by $index">
+				<td>{{user.Likes[$index]}}</td>
+				<td>{{user.Dislikes[$index]}}</td>
+			</tr>
+		</tbody>
+	</table>
 </div>

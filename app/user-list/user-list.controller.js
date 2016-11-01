@@ -21,10 +21,14 @@
             $scope.selectedUser = user;
         }
 
-        $scope.userName = $stateParams.userName;
-
         $scope.isSelectedUser = function (user) {
             return ($scope.selectedUser && user && user.name === $scope.selectedUser.name);
+        }
+
+        // If user is navigating to perticular user path directly, highlight that user 
+        $scope.userName = $stateParams.userName;
+        if ($scope.userName) {
+            $scope.userSelected({ name: $scope.userName });
         }
 
     });

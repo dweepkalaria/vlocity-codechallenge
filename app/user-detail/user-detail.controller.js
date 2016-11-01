@@ -6,6 +6,7 @@
     userDetailApp.controller('userDetailController', function ($scope, $stateParams, userService) {
 
         $scope.userName = $stateParams.userName;
+        $scope.showMessageBox = false;
 
         if ($scope.userName) {
             var promise = userService.getUserDetailByName($scope.userName);
@@ -25,6 +26,11 @@
                 var length = (likes.length > dislikes.length) ? likes.length : dislikes.length;
                 return new Array(length);
             }
+        }
+
+        $scope.sendMessage = function () {
+            //TODO: Access Service to send message here.
+            $scope.showMessageBox = !$scope.showMessageBox;
         }
 
     });
