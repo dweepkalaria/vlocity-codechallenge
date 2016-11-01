@@ -7,6 +7,14 @@
     border: 1px solid #dfd7ca;
 }
 
+.search-form{
+    display:table; 
+    width:130%
+}
+.search-group{
+    display:table-cell !important;
+    vertical-align:middle;
+}
 .search-div{
     margin-left: 15px;
 }
@@ -27,16 +35,20 @@
     border-right: 0px;
 }
 .user-profile{
-    margin-left: 55%;
+    display:table-cell; 
+    vertical-align:middle; 
+    text-align:right;
 }
-.user-profile-name{
-    vertical-align: middle;
-    padding-bottom: 20px;
-    margin-right: 20px;
+.user-profile.name{
+    width: 100px
+}
+.user-profile.image{
+    width: 70px
+}
+.user-profile.carret{
+    width: 25px
 }
 .user-profile-button{
-    align-self: stretch;
-    width: 25px;
     background: transparent;
     border: none;
 }

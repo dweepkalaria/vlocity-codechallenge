@@ -1,8 +1,8 @@
 <div class="col-sm-3">
-	<div class="user-list-cell" ng-class="{active: user.name === selectedUser.name}" ng-repeat="user in users | filter:searchString"
+	<div class="user-list-cell" ng-class="{active: isSelectedUser(user)}" ng-repeat="user in users | filter:searchString"
 		ui-sref="users.detail({ userName: user.name })" ng-click="userSelected(user)">
 		<span>{{user.name}}</span>
-		<div class="float-right">
+		<div class="float-right" ng-if="isSelectedUser(user)">
 			<i class="fa fa-play"></i>
 		</div>
 	</div>

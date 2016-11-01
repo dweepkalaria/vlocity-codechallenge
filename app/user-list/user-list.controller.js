@@ -17,11 +17,15 @@
             $scope.searchString = searchString;
         })
 
-        $scope.userSelected = function(user){
+        $scope.userSelected = function (user) {
             $scope.selectedUser = user;
         }
 
         $scope.userName = $stateParams.userName;
+
+        $scope.isSelectedUser = function (user) {
+            return ($scope.selectedUser && user && user.name === $scope.selectedUser.name);
+        }
 
     });
 
