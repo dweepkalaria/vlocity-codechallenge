@@ -109,4 +109,5 @@
 .likes-table{
     margin: 15px;
     width: 95%;
+    border-bottom: 1px solid #dfd7ca;
 }

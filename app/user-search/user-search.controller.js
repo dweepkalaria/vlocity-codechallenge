@@ -11,6 +11,9 @@
             $rootScope.$broadcast("searchStringChanged", $scope.searchString);
         }
 
+        $scope.clearSearch = function () {
+            $scope.searchString = "";
+            $scope.searchStringChanged();
+        }
     });
-
 } ());

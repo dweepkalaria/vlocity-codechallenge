@@ -14,7 +14,7 @@
 
         // Get search string from search module.
         $scope.$on("searchStringChanged", function (event, searchString) {
-            $scope.searchString = searchString;
+            $scope.search = { name: searchString };
         })
 
         $scope.userSelected = function (user) {

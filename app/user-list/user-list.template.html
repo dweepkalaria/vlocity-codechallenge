@@ -1,7 +1,7 @@
 <div class="col-sm-3">
 	<div class="user-list-cell" 
 		ng-class="{active: isSelectedUser(user)}" 
-		ng-repeat="user in users | filter:searchString" 
+		ng-repeat="user in users | filter:search" 
 		ui-sref="users.detail({ userName: user.name })"
 		ng-click="userSelected(user)">
 		<span>{{user.name}}</span>
