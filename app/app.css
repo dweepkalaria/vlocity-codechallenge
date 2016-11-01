@@ -84,18 +84,26 @@
 }
 .msg-btn{
     width: 155px;
+    background: #f8f5f0; 
+    color: black; 
+    border: 1px solid #dfd7ca
 }
 .rating{
     margin: 2px;
 }
 .rating-group{
     margin-top: 15px;
+    color: #dfd7ca;
 }
 .n-rating-group{
     margin-left: -3px;
 }
 
 .description{
-    margin: 15px;
+    margin: 55px 15px 15px 15px;
     min-height: 150px;
+}
+.likes-table{
+    margin: 15px;
+    width: 95%;
 }
