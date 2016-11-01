@@ -54,12 +54,14 @@
 }
 
 .user-list-cell{
-    border-width: 1px 2px 1px 2px;
+    border-width: 1px;
     border-color: #dfd7ca;
     border-style: solid;
-    line-height: 90px;
+    line-height: 85px;
     padding: 5px;
     font-size: 20px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 .user-list-cell:hover{
     background: #f9f7f9;
@@ -86,7 +88,8 @@
     width: 155px;
     background: #f8f5f0; 
     color: black; 
-    border: 1px solid #dfd7ca
+    border: 1px solid #dfd7ca;
+    height: 46px;
 }
 .rating{
     margin: 2px;
