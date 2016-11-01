@@ -8,7 +8,7 @@
 
                 var dfr = $q.defer();
 
-                readTextFile("services/people.json", function (data) {
+                this.readTextFile("services/people.json", function (data) {
                     var jsonData = JSON.parse(data);
                     if (jsonData && jsonData.People) {
                         dfr.resolve(jsonData.People);
@@ -24,7 +24,7 @@
 
                 var dfr = $q.defer();
 
-                readTextFile("services/people.json", function (data) {
+                this.readTextFile("services/people.json", function (data) {
                     var jsonData = JSON.parse(data);
                     if (jsonData && jsonData.People) {
                         for (var i = 0; i < jsonData.People.length; i++) {
@@ -40,14 +40,14 @@
                 return dfr.promise;
             };
 
-            function readTextFile(file, callback, error) {
+            this.readTextFile = function (file, callback, error) {
                 try {
                     var rawFile = new XMLHttpRequest();
                     rawFile.overrideMimeType("application/json");
                     rawFile.open("GET", file, true);
                     rawFile.onreadystatechange = function () {
                         if (rawFile.readyState === 4 && rawFile.status == "200") {
-                            callback(rawFile.responseText.toString());
+                            callback(rawFile.responseText);
                         }
                     }
                     rawFile.send(null);
